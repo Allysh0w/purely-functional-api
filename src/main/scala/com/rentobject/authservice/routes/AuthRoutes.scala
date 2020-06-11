@@ -15,7 +15,7 @@ object AuthRoutes {
     val dsl = new Http4sDsl[F]{}
     import dsl._
     HttpRoutes.of[F] {
-      case req @ POST -> Root / "test" =>
+      case req @ POST -> Root / "user" =>
          val a: F[Response[F]] = req.decode[User]{ x => Ok(Handler.addUser(x))}
           a
     }
