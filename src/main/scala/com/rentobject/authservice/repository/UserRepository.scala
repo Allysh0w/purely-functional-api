@@ -38,11 +38,7 @@ object UserRepository {
         users.insert(lift(usr))
       }
 
-       println(user)
-      println("OKKKK")
-
-        val a = ctx.run(query)
-       println(a)
+       ctx.run(query)
        UserId(usr.user_id.get.toString).pure[F]
 
     }

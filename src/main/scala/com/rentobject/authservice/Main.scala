@@ -15,4 +15,4 @@ object Main extends IOApp {
   def run(args: List[String]) =
     ServerAPI.stream[IO].compile.drain.as(ExitCode.Success)
 
-
+}
