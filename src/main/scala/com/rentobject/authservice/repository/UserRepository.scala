@@ -23,7 +23,6 @@ object UserRepository {
   val ctx = new CassandraSyncContext(SnakeCase, "ctx")
 
   import ctx._
-  implicit val ec: ExecutionContext = ExecutionContext.fromExecutor(Executors.newFixedThreadPool(4))
   def impl[F[_]: Applicative]: UserRepository[F] = new UserRepository[F] {
 
      def addUser(user: User): F[UserId] = {
