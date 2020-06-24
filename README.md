@@ -1,9 +1,9 @@
 
- Purely functional API using http4s, circe and quill for cassandra. 
+ # Purely functional API using http4s, circe and quill for cassandra. 
 
 You can use this docker compose => [Apache Cassandra docker composer](https://github.com/Javac7/my-compose/blob/master/cassandra-docker-compose.yml)
 
-# Create the environment:
+## Create the environment:
 
 ```cql
     CREATE KEYSPACE IF NOT EXISTS "rent_object"
